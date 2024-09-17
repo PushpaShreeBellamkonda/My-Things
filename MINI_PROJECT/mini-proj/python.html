@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <style>    
+        *{
+    margin:0;
+    padding:0;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #2e364a;
+}
+.timeline{
+    position:relative;
+    max-width:1200px;
+    margin:100px auto;
+}
+.container{
+    padding:10px 50px;
+    position:relative;
+    width:50%;
+    animation:movedown 1s linear forwards;
+    opacity:0;
+   
+}
+@keyframes movedown{
+    0%{
+        opacity:1;
+        transform:translateY(-30px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+.container:nth-child(2){
+    animation-delay:1s;
+}
+.container:nth-child(3){
+    animation-delay:2s;
+}
+.container:nth-child(4){
+    animation-delay:3s;
+}
+.container:nth-child(5){
+    animation-delay:4s;
+}
+.container:nth-child(6){
+    animation-delay:5s;
+}
+.text-box{
+    padding:20px 30px;
+    background:#fff;
+    position:relative;
+    border-radius:6px;
+    font-size:15px;
+}
+.left-container{
+    left:0;
+}
+.right-container{
+    left:50%;
+}
+.container img{
+    position:absolute;
+    width:40px;
+    border-radius:50%;
+    right:-20px;
+    top:32px;
+    z-index:10;
+}
+.right-container img{
+    left:-20px;
+}
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:6px;
+    height:100%;
+    background:#fff;
+    top:0;
+    left:50%;
+    margin-left:-3px;
+    z-index:-1;
+    animation:moveline 6s linear forwards;
+
+}
+@keyframes moveline{
+    0%{
+        height:0;
+    }
+    100%{
+        height:100%;
+    }
+}
+.text-box h2{
+    font-weight:600;
+
+}
+.text-box small{
+    display:inline-block;
+    margin-bottom:15px;
+}
+.left-container-arrow{
+    height:0;
+    width:0;
+    position:absolute;
+    top:28px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-left:15px solid #fff;
+    right:-15px;
+}
+.right-container-arrow{
+    height:0;
+    width:0;
+    position:absolute;
+    top:28px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-right:15px solid #fff;
+    left:-15px;
+}
+@media screen and (max-width:600px){
+    .timeline{
+        margin:50px auto;
+    }
+    .timeline::after{
+        left:31px;
+    }
+    .container{
+        width:100%;
+        padding-left:80px;
+        padding-right:25px;
+    }
+    .text-box{
+        font-size:13px;
+    }
+    .text-box small{
+        margin-bottom:10px;
+    }
+    .right-container{
+        left:0;
+    }
+    .left-container img,right-container img{
+        left:10px;
+    }
+    .left-container-arrow,.right-container-arrow{
+        border-right:15px solid #fff;
+        border-left:0;
+        left:-15px;
+    }
+}
+h1{
+color:#fff;}
+    </style>
+</head>
+<body>
+<h1>Python Programming</h1>
+    <div class="timeline">
+        <div class="container left-container">
+            <div class="text-box">
+                <small>STEP 1</small>
+                <h2>BASICS</h2>
+                <p>Python is a popular, high-level programming language known for its simplicity and readability. Python’s syntax is designed to be easy to understand and write, making it a great choice for beginners </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 2</small>
+                <h2>LOOPS ,FUNCTIONS</h2>
+                <p>Functions break code into smaller chunks and are great for defining actions that a program will execute several times throughout your code.</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <div class="text-box">
+                <small>STEP 3</small>
+                <h2>DATA STRUCTURES</h2>
+                <p>Data Structures - Lists, Dictionaries, Tuples, and Sets - offer a rich toolkit for managing, organizing, and manipulating data in various ways. </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 4</small>
+                <h2>OOP</h2>
+                <p>Object-oriented programming is a programming paradigm that is based on the concept of "objects", which can contain data and code that manipulates that data.</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <div class="text-box">
+                <small>STEP 5</small>
+                <h2>ADVANCED TOPICS</h2>
+                <p>Advanced Python helps you take your Python skills to the next level with in-depth tutorials on advanced topics like concurrency, metaprogramming, optimization, testing, and deploying production applications.  </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 6</small>
+                <h2>PYTHON LIBRARIES</h2>
+                <p>A Python library is a collection of related modules. It contains bundles of code that can be used repeatedly in different programs.</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

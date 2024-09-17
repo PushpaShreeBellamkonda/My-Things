@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science</title>
+    <style>
+       *{
+    margin:0;
+    padding:0;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #2e364a;
+}
+.timeline{
+    position:relative;
+    max-width:1200px;
+    margin:100px auto;
+}
+.container{
+    padding:10px 50px;
+    position:relative;
+    width:50%;
+    animation:movedown 1s linear forwards;
+    opacity:0;
+   
+}
+@keyframes movedown{
+    0%{
+        opacity:1;
+        transform:translateY(-30px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+.container:nth-child(2){
+    animation-delay:1s;
+}
+.container:nth-child(3){
+    animation-delay:2s;
+}
+.container:nth-child(4){
+    animation-delay:3s;
+}
+.container:nth-child(5){
+    animation-delay:4s;
+}
+.container:nth-child(6){
+    animation-delay:5s;
+}
+.text-box{
+    padding:20px 30px;
+    background:#fff;
+    position:relative;
+    border-radius:6px;
+    font-size:15px;
+}
+.left-container{
+    left:0;
+}
+.right-container{
+    left:50%;
+}
+.container img{
+    position:absolute;
+    width:40px;
+    border-radius:50%;
+    right:-20px;
+    top:32px;
+    z-index:10;
+}
+.right-container img{
+    left:-20px;
+}
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:6px;
+    height:100%;
+    background:#fff;
+    top:0;
+    left:50%;
+    margin-left:-3px;
+    z-index:-1;
+    animation:moveline 6s linear forwards;
+
+}
+@keyframes moveline{
+    0%{
+        height:0;
+    }
+    100%{
+        height:100%;
+    }
+}
+.text-box h2{
+    font-weight:600;
+
+}
+.text-box small{
+    display:inline-block;
+    margin-bottom:15px;
+}
+.left-container-arrow{
+    height:0;
+    width:0;
+    position:absolute;
+    top:28px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-left:15px solid #fff;
+    right:-15px;
+}
+.right-container-arrow{
+    height:0;
+    width:0;
+    position:absolute;
+    top:28px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-right:15px solid #fff;
+    left:-15px;
+}
+@media screen and (max-width:600px){
+    .timeline{
+        margin:50px auto;
+    }
+    .timeline::after{
+        left:31px;
+    }
+    .container{
+        width:100%;
+        padding-left:80px;
+        padding-right:25px;
+    }
+    .text-box{
+        font-size:13px;
+    }
+    .text-box small{
+        margin-bottom:10px;
+    }
+    .right-container{
+        left:0;
+    }
+    .left-container img,right-container img{
+        left:10px;
+    }
+    .left-container-arrow,.right-container-arrow{
+        border-right:15px solid #fff;
+        border-left:0;
+        left:-15px;
+    }
+}
+h1{
+color:#fff;
+}
+    </style>
+</head>
+<body>
+<h1>Data Science</h1>
+    <div class="timeline">
+        <div class="container left-container">
+            <div class="text-box">
+                <small>STEP 1</small>
+                <h2>PROGRAMMING(PYTHON,R,JAVA,SQL)</h2>
+                <p>A programming language is a way for programmers (developers) to communicate with computers. Programming languages consist of a set of rules that allows string values to be converted into various ways of generating machine code, </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 2</small>
+                <h2>MATH FUNDAMENTAL(STATISTICS)</h2>
+                <p>Statistics, probability, and linear algebra form the backbone of data science and ML, enabling practitioners to extract meaningful insights from data, make informed decisions, and build robust models.</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <div class="text-box">
+                <small>STEP 3</small>
+                <h2>DATA ANALYSIS</h2>
+                <p>A Data analysis has the ability to transform raw available data into meaningful insights for your business and your decision-making. </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 4</small>
+                <h2>MACHINE LEARNING</h2>
+                <p>Machine learning analyzes and examines large chunks of data automatically. It automates the data analysis process and makes predictions in real-time without any human involvement. </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <div class="text-box">
+                <small>STEP 5</small>
+                <h2>WEB SCRAPPING</h2>
+                <p>Web scraping, is a process of importing data from websites into files or spreadsheets. It is used to extract data from the web, either for personal use by the scraping operator, or to reuse the data on other websites. </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 6</small>
+                <h2>VISUALIZATION</h2>
+                <p>Data visualization is the representation of data through use of common graphics, such as charts, plots, infographics and even animations.</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

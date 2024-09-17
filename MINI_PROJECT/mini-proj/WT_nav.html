@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #2e364a;
+}
+.timeline{
+    position:relative;
+    max-width:1200px;
+    margin:100px auto;
+}
+.container{
+    padding:10px 50px;
+    position:relative;
+    width:50%;
+    animation:movedown 1s linear forwards;
+    opacity:0;
+   
+}
+@keyframes movedown{
+    0%{
+        opacity:1;
+        transform:translateY(-30px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+.container:nth-child(2){
+    animation-delay:1s;
+}
+.container:nth-child(3){
+    animation-delay:2s;
+}
+.container:nth-child(4){
+    animation-delay:3s;
+}
+.container:nth-child(5){
+    animation-delay:4s;
+}
+.container:nth-child(6){
+    animation-delay:5s;
+}
+.text-box{
+    padding:20px 30px;
+    background:#fff;
+    position:relative;
+    border-radius:6px;
+    font-size:15px;
+}
+.left-container{
+    left:0;
+}
+.right-container{
+    left:50%;
+}
+.container img{
+    position:absolute;
+    width:40px;
+    border-radius:50%;
+    right:-20px;
+    top:32px;
+    z-index:10;
+}
+.right-container img{
+    left:-20px;
+}
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:6px;
+    height:100%;
+    background:#fff;
+    top:0;
+    left:50%;
+    margin-left:-3px;
+    z-index:-1;
+    animation:moveline 6s linear forwards;
+
+}
+@keyframes moveline{
+    0%{
+        height:0;
+    }
+    100%{
+        height:100%;
+    }
+}
+.text-box h2{
+    font-weight:600;
+
+}
+.text-box small{
+    display:inline-block;
+    margin-bottom:15px;
+}
+.left-container-arrow{
+    height:0;
+    width:0;
+    position:absolute;
+    top:28px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-left:15px solid #fff;
+    right:-15px;
+}
+.right-container-arrow{
+    height:0;
+    width:0;
+    position:absolute;
+    top:28px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-right:15px solid #fff;
+    left:-15px;
+}
+@media screen and (max-width:600px){
+    .timeline{
+        margin:50px auto;
+    }
+    .timeline::after{
+        left:31px;
+    }
+    .container{
+        width:100%;
+        padding-left:80px;
+        padding-right:25px;
+    }
+    .text-box{
+        font-size:13px;
+    }
+    .text-box small{
+        margin-bottom:10px;
+    }
+    .right-container{
+        left:0;
+    }
+    .left-container img,right-container img{
+        left:10px;
+    }
+    .left-container-arrow,.right-container-arrow{
+        border-right:15px solid #fff;
+        border-left:0;
+        left:-15px;
+    }
+}
+h1{
+color:#fff;
+}
+    </style>
+</head>
+<body>
+<h1>Web Development</h1>
+    <div class="timeline">
+        <div class="container left-container">
+            <div class="text-box">
+                <small>STEP 1</small>
+                <h2>HTML(BASIC TEXTS & SHAPES)</h2>
+                <p>HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page. HTML consists of a series of elements</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 2</small>
+                <h2>CSS(STYLE HTML)</h2>
+                <p>CSS is the acronym of Cascading Style Sheets. CSS is a computer language for laying out and structuring web pages (HTML or XML). </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <div class="text-box">
+                <small>STEP 3</small>
+                <h2>JAVA SCRIPT(INTERACTIVE ELEMENTS)</h2>
+                <p>JavaScript is a programming language used to create dynamic content for websites. It achieves this by adding new HTML elements while modifying existing ones.</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 4</small>
+                <h2>PYTHON(DATA PROCESSING)</h2>
+                <p>Python is a computer programming language often used to build websites and software, automate tasks, and analyze data. </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <div class="text-box">
+                <small>STEP 5</small>
+                <h2>SQL(DATA MANIPULATION)</h2>
+                <p>SQL is used to communicate with a database. According to ANSI (American National Standards Institute), it is the standard language for relational database management systems. </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 6</small>
+                <h2>NODE.JS(PROGRAMMING SERVER)</h2>
+                <p>Node. js is a single-threaded, open-source, cross-platform runtime environment for building fast and scalable server-side and networking applications.</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
