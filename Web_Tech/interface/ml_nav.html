@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Timeline - Easy Tutorials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background: #2e364a;
+            padding: 20px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 500px;
+            margin: 20px 0;
+        }
+        .container {
+            padding: 10px 20px;
+            position: relative;
+            width: 100%;
+            animation: movedown 1s linear forwards;
+            opacity: 0;
+            margin-bottom: 20px;
+        }
+        @keyframes movedown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .container:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        .container:nth-child(3) {
+            animation-delay: 1s;
+        }
+        .container:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+        .container:nth-child(5) {
+            animation-delay: 2s;
+        }
+        .container:nth-child(6) {
+            animation-delay: 2.5s;
+        }
+        .text-box {
+            padding: 10px 20px;
+            background: #fff;
+            position: relative;
+            border-radius: 6px;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .right-container {
+            width: 100%;
+            text-align: left;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            background: #fff;
+            top: 0;
+            left: 30px;
+            margin-left: -3px;
+            z-index: -1;
+            animation: moveline 3s linear forwards;
+        }
+        @keyframes moveline {
+            0% {
+                height: 0;
+            }
+            100% {
+                height: 100%;
+            }
+        }
+        .text-box h2 {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .text-box small {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #888;
+        }
+        .left-container-arrow {
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid #fff;
+            right: -10px;
+        }
+        .right-container-arrow {
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid #fff;
+            left: -10px;
+        }
+        @media screen and (max-width: 600px) {
+            .timeline {
+                padding: 10px;
+            }
+            .timeline::after {
+                left: 15px;
+            }
+            .container {
+                padding-left: 40px;
+                padding-right: 10px;
+            }
+            .text-box {
+                font-size: 13px;
+            }
+            .text-box small {
+                margin-bottom: 5px;
+            }
+            .left-container-arrow,
+            .right-container-arrow {
+                left: -10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 1</small>
+                <h2>APPLIED PYTHON PROGRAMMING</h2>
+                <p>LEARN THE FUNDAMENTALS OF PYTHON AND SEE HOW IT CAN BE USED TO BUILD REAL-WORLD APPLICATIONS</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 2</small>
+                <h2>INTRODUCTION TO DATA SCIENCE USING PYTHON</h2>
+                <p>LEARN THE SCIENTIFIC LIBRARIES OF PYTHON(NUMPY,PANDAS,MATPLOTLIB) AND SEE HOW THEY ARE USED TO SOLVE DATA SCIENCE PROBLEMS</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 3</small>
+                <h2>MACHINE LEARNING USING AZURE ML STUDIO AND R</h2>
+                <p>GET STARTED WITH MACHINE LEARNING USING MICROSOFT AZURE ML STUDIO AND SEE HOW IT CAN INTEGRATE WITH R PROGRAMMING LANGUAGE</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <div class="text-box">
+                <small>STEP 4</small>
+                <h2>ML USING PYTHON AND SCIKIT-LEARN</h2>
+                <p>LEARN TO IMPLEMENT ML USING THE SCIKIT-LEARN LIBRARIES USING PYTHON</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+      
+    </div>
+</body>
+</html>
+
